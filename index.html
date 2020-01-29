@@ -9,7 +9,7 @@
   </head>
   
   <body>
-    <h1>Ball Game!!</h1>
+    <h1>Ball Game</h1>
     <p>Click any part of the screen to change the ball's velocity!</p>
     
     <script type="text/processing">
@@ -24,9 +24,7 @@
         location = new PVector(100, 100);
         velocity = new PVector(8, 7);
         gravity = new PVector(0, 0.2);
-      }
-
-      void draw(){
+        
         background(200);
         fill(255,0,0);
         rect(250, 80, 50, 280);
@@ -35,6 +33,10 @@
         rect(1000, 600, 50, 280);
         rect(1200, 600, 50, 280);
         rect(1380, 60, 50, 280);
+      }
+
+      void draw(){
+        
         stroke(255); // Add velocity to the location.
         location.add(velocity); // Add gravity to velocity
         velocity.add(gravity); // Bounce off edges
