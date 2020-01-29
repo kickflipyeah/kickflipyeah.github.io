@@ -44,6 +44,57 @@
         strokeWeight(2);
         fill(127);
         ellipse(location.x, location.y, 48, 48); //collide with top block 
+        
+         if ((location.x > width) || (location.x < 0)){
+              velocity.x = velocity.x * -1;
+          } 
+
+          if (location.x > 1050 && location.x<1200 && location.y>650 && location.y<870){
+            location.y = (870);
+            location.x = (110);
+            velocity.x =  0;
+            velocity.y = 0;
+            textSize(32);
+            text("Yay", 800, 300); 
+            delay(1000);
+            fill(0, 102, 153);
+          } 
+
+          else if (location.y > height){ // when it hits the bottom of the window
+            location.y = height;
+            location = new PVector(100, 100);
+            velocity = new PVector(8, 7);
+          }
+
+          if(location.x > 250 && location.x<300 && location.y>80 && location.y<340) {
+            velocity.x = velocity.x * -1;
+          }
+
+          if(location.x > 0 && location.x<280 && location.y>600 && location.y<650) {
+            velocity.y = velocity.y * -1;
+          }
+
+          if(location.x > 300 && location.x<580 && location.y>300 && location.y<350) {
+            velocity.y = velocity.y * -1;
+          }
+
+          if(location.x > 1000 && location.x<1050 && location.y>600 && location.y<880) {
+            velocity.x = velocity.x * -1;
+          }
+
+          if(location.x > 1200 && location.x<1250 && location.y>600 && location.y<880) {
+            velocity.x = velocity.x * -1;
+          }
+
+          if(location.x > 1380 && location.x<1430 && location.y>60 && location.y<340) {
+            velocity.x = velocity.x * -1;
+          }
+
+          if(mousePressed == true) {
+            velocity.x = velocity.x * -1;
+          }
+     
+     
      }
     
     
